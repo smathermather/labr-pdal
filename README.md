@@ -1,5 +1,5 @@
-A PG GIS setup for Docker
-=========================
+A PG GIS setup for Vagrant
+==========================
 
 Presentation
 ------------
@@ -18,38 +18,4 @@ It creates a pggis database with a pggis superuser (password pggis), with postgi
 Build and/or run the container
 ------------------------------
 
-Git clone this repository to get the Dockerfile, and cd to it.
-
-You can build the image with :
-
-```sh
-sudo docker.io build -t oslandia/pggis .
-```
-
-Run the container with :
-
-```sh
-sudo docker.io run --rm -P --name pggis_test oslandia/pggis /sbin/my_init
-```
-
-Connect to the database
------------------------
-
-Assuming you have the postgresql-client installed, you can use the host-mapped port to test as well. You need to use docker ps to find out what local host port the container is mapped to first:
-
-```sh
-$ sudo docker.io ps
-CONTAINER ID        IMAGE                   COMMAND                CREATED             STATUS              PORTS                     NAMES
-75fec271dc5e        oslandia/pggis:latest   /usr/lib/postgresql/   51 seconds ago      Up 50 seconds       0.0.0.0:49154->5432/tcp   pggis_test          
-$ psql -h localhost -p 49154 -d pggis -U pggis --password
-```
-
-References
-==========
-
-Dockerfile reference :
-http://docs.docker.io/reference/builder/
-
-PostgreSQL service example :
-http://docs.docker.io/examples/postgresql_service/
-
+....
