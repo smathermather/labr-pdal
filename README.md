@@ -15,8 +15,8 @@ It is based on Ubuntu 14.04 and features :
 
 It creates a pggis database with a pggis superuser (password pggis), with postgis, pgrouting and pointcloud extensions activated. It is therefore ready to eat data, and you can enjoy 2D vector and raster features, 3D support and functions, large point data volumes and analysis, topology support and all PostgreSQL native features.
 
-Build and/or run the container
-------------------------------
+Build and/or run the VM
+-----------------------
 
 Download and install VirtualBox and Vagrant
 
