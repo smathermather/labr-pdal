@@ -40,15 +40,13 @@ If a Linux user, install git, e.g. on Ubuntu:
 ---
 
 Now clone the Vagrant machine repository, and start up and ssh into the machine from the command line
-(Terminal i Mac, and LWindows:
+('Terminal' in Mac and Linux, 'Git Shell' in Windows:
 
 ```SHELL
 git clone https://github.com/OpenDroneMap/odm.git
 cd odm
 vagrant up
-vagrant ssh 
-
-#(for Windows users-- run this in your Git Shell)
+vagrant ssh
 ```
 ---
 
@@ -59,5 +57,8 @@ cd /vagrant/
 chmod 700 bootstrap.sh
 ./bootstrap.sh
 ```
+Be patient. This will take a while.
 
+---
 
+When this is done running, you should be able to connect to your PostGIS database (with all those extra goodies) at localhost:4567 as pggis (password pggis).
