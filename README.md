@@ -62,3 +62,12 @@ Be patient. This will take a while.
 ---
 
 When this is done running, you should be able to connect to your PostGIS database (with all those extra goodies) at localhost:4567 as pggis (password pggis).
+
+---
+
+Extra notes for my Seoul friends:
+---------------------------------
+
+Also download and install the latest
+* pgAdmin: http://pgadmin.org/
+* QGIS: http://qgis.org
