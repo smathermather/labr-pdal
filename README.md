@@ -4,7 +4,7 @@ PostGIS Setup scripts with PDAL, Routing, and SFCGAL
 Presentation
 ------------
 
-This Vagrant image is a container with all latest PostgreSQL extensions needed to do serious GIS work.
+These are some commands to install latest PostgreSQL extensions needed to do serious GIS work.
 It is based on Ubuntu 14.04 and features :
 
 * PostgreSQL 9.3 (from package)
@@ -17,3 +17,4 @@ It creates a pggis database with a pggis superuser (password pggis), with postgi
 
 One known gotcha -- if your machine doesn't have 4GB of RAM, SFCGAL fails to compile.
 
+http://trac.osgeo.org/postgis/ticket/2930
