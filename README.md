@@ -6,11 +6,11 @@ PostGIS Setup scripts with PDAL, Routing, and SFCGAL
 Presentation
 ------------
 
-These are some commands to install latest PostgreSQL extensions needed to do serious GIS work.
+These are some commands to install latest PostgreSQL unstable extensions needed to do serious GIS work.
 It is based on Ubuntu 14.04 and features :
 
 * PostgreSQL 9.3 (from package)
-* PostGIS 2.1.3 (compiled from release sources) with SFCGAL support (git master)
+* PostGIS (git master) (compiled from release sources) with SFCGAL support (git master)
 * PgRouting (git master)
 * PostgreSQL PointCloud extension (git master)
 * PDAL (git master)
@@ -40,10 +40,10 @@ cd SFCGAL && cmake . && make -j3 && sudo make install
 cd ..
 
 # PostGIS
-wget http://download.osgeo.org/postgis/source/postgis-2.1.3.tar.gz
-tar -xzf postgis-2.1.3.tar.gz
-cd postgis-2.1.3 && ./configure --with-sfcgal=/usr/local/bin/sfcgal-config
-make -j2 && sudo make install
+./autogen.sh
+git clone https://github.com/postgis/postgis.git
+cd postgis && ./autogen.sh && ./configure --with-sfcgal=/usr/local/bin/sfcgal-config
+make -j3 && sudo make install
 cd ..
 
 ### pgRouting and PDAL
