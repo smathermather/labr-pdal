@@ -40,7 +40,6 @@ cd SFCGAL && cmake . && make -j3 && sudo make install
 cd ..
 
 # PostGIS
-./autogen.sh
 git clone https://github.com/postgis/postgis.git
 cd postgis && ./autogen.sh && ./configure --with-sfcgal=/usr/local/bin/sfcgal-config
 make -j3 && sudo make install
